@@ -1,0 +1,53 @@
+[tool]
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "$major.$minor.$patch"
+
+[tool.poetry]
+name = "exmed-bert"
+version = "0.1.0"
+description = "Code for the ExMed-BERT Model"
+authors = ["Manuel Lentzen <manuel.lentzen@scai.fraunhofer.de>"]
+readme = "README.md"
+packages = [{include = "exmed_bert"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+click = "8.0.3"
+typer = "0.6.1"
+seaborn = "0.11.2"
+xgboost = "1.5.0"
+pandas = "1.3.4"
+optuna = "2.10.0"
+matplotlib = "3.5.0"
+numpy = "1.22.3"
+mlflow = "^1.30.0"
+hydra-core = "1.1.1"
+joblib = "^1.2.0"
+torch = {url = "https://download.pytorch.org/whl/cu111/torch-1.10.0%2Bcu111-cp39-cp39-linux_x86_64.whl"}
+transformers = "^4.24.0"
+scikit-learn = "^1.1.3"
+psmpy = "^0.3.5"
+multipledispatch = "^0.6.0"
+SQLAlchemy-Utils = "^0.38.3"
+SQLAlchemy = "^1.4.44"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+flake8 = "^5.0.4"
+commitizen = "^2.37.0"
+mypy = "^0.990"
+ipython = "^8.6.0"
+pytype = "^2022.11.10"
+pyright = "^1.1.279"
+pyre-check = "^0.9.17"
+pandas-stubs = "^1.5.1.221024"
+vulture = "^2.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"

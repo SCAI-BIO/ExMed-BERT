@@ -127,3 +127,37 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+=======
+test_*/
+data/*
+!data/interim
+__pycache__/
+mlruns/
+test/
+.vscode/
+slurm/
+.ipynb_checkpoints/
+.Rhistory
+Rplots.pdf
+node_modules/
+
+*.pt
+*.log
+*.log.*
+*.txt
+*.pyc
+
+commitlint.config.js
+.husky/
+results/
+logs/
+sagemaker-debug
+.idea/
+multirun/
+medbert_int.egg-info/
+
+models/
+checkpoint-*/
+benchmarking/
+run-*/
+.snakemake/
