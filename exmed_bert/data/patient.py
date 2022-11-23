@@ -417,7 +417,8 @@ class Patient(object):
                 # Exchanged with min(age) at a later point
                 age_sequence = ["UNK"]
 
-            self.combined_length = len(unique_dates) + 1 + len(self.codes)
+            # account for SEP and CLS token
+            self.combined_length = len(unique_dates) + 1 + len(self.time_points)
 
         # Remaining data can be stored to generate multiple patient instances if
         # splitting is activated
