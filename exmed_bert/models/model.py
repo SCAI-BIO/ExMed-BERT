@@ -389,7 +389,7 @@ class ExMedBertModel(BertModel):
             pooled_output = self.pooler(encoder_output["last_hidden_state"])
             return out + (pooled_output,)  # type: ignore
         else:
-            return  out # type: ignore
+            return out  # type: ignore
 
 
 class BertLMPredictionHeadVar(BertLMPredictionHead):
@@ -558,16 +558,6 @@ class SequenceClassificationHead(nn.Module):
             input_tensor = torch.cat((input_tensor, observations), dim=1)
         logits = self.los_classifier(input_tensor)
         return self.sigmoid(logits), logits
-
-
-# TODO: remove in published version
-def check_config(config, key):
-    """Helper function"""
-    if not hasattr(config, key):
-        args = config.to_dict()
-        args[key] = False
-        config = ExMedBertConfig(args)
-    return config
 
 
 class ExMedBertForSequenceClassification(ExMedBertModel):
