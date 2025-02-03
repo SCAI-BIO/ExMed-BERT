@@ -154,10 +154,11 @@ logs/
 sagemaker-debug
 .idea/
 multirun/
-medbert_int.egg-info/
 
 models/
+!exmed_bert/models
 checkpoint-*/
 benchmarking/
 run-*/
 .snakemake/
+
